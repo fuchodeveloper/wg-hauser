@@ -1,6 +1,7 @@
 import { GraphQLModule } from '@nestjs/graphql';
 import { Module } from '@nestjs/common';
 import { join } from 'path';
+import { HelloResolver } from './resolvers/hello.resolver';
 
 @Module({
   imports: [
@@ -12,5 +13,6 @@ import { join } from 'path';
       playground: true,
     }),
   ],
+  providers: [HelloResolver],
 })
 export class AppModule {}
