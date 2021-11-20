@@ -3,14 +3,14 @@
   "name": "wg-hauser",
   "builds": [
     {
-      "src": "dist/main.js",
+      "src": "server/dist/main.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/main.js"
+      "dest": "server/dist/main.js"
     }
   ]
 }
