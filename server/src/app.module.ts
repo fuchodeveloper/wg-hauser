@@ -6,7 +6,8 @@ import { HelloResolver } from './resolvers/hello.resolver';
 @Module({
   imports: [
     GraphQLModule.forRoot({
-      typePaths: ['./**/*.graphql'],
+      typePaths: ['src/graphql/*.graphql'],
+      // typePaths: ['./**/*.graphql'],
       definitions: {
         path: join(process.cwd(), 'src/graphql/types.ts'),
       },
