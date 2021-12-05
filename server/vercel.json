@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "bells-nestjs",
+  "name": "wg-hauser",
   "builds": [
     {
       "src": "src/main.ts",
