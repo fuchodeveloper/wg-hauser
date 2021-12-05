@@ -8,6 +8,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
+    "postbuild": "rm -rf dist && tsc -p tsconfig.build.json && copyfiles *.graphql dist/",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -26,6 +27,7 @@
     "@nestjs/graphql": "^9.1.1",
     "@nestjs/platform-express": "^8.0.0",
     "apollo-server-express": "^3.5.0",
+    "copyfiles": "^2.4.1",
     "graphql": "^15",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
