@@ -3,7 +3,6 @@ Server side code for wg-hauser with NestJS
 
 ### Run
 ```bash
-cd server
 yarn install
 yarn start:dev
 ```
