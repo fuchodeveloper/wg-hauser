@@ -6,9 +6,10 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && tsc -p tsconfig.build.json && copyfiles -f src/graphql/*.graphql dist/graphql/",
+    "prebuild:old": "rimraf dist",
     "build": "nest build",
-    "postbuild": "rm -rf dist && tsc -p tsconfig.build.json && copyfiles *.graphql dist/",
+    "postbuild:old": "rm -rf dist && tsc -p tsconfig.build.json && copyfiles *.graphql dist/",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
